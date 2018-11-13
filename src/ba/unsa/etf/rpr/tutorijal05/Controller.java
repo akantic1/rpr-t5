@@ -1,9 +1,13 @@
 package ba.unsa.etf.rpr.tutorijal05;
 
+import javafx.beans.property.SimpleStringProperty;
+
+import java.awt.event.ActionEvent;
+
 public class Controller {
     //nemam instalirano FX
     public SimpleStringProperty digitron;
-    private SimpleStringProperty operacija new SimpleStringProperty("");
+    private SimpleStringProperty  operacija =new SimpleStringProperty("");
     public Controller(){
         digitron=new SimpleStringProperty("");
     }
@@ -14,7 +18,7 @@ public class Controller {
 
 
     public void setDigitron(String digitron) {
-        digitron.set(digitron);
+        this.digitron.set(digitron);
     }
     public void tipka0(ActionEvent actionEvent) {
         digitron.set("0");
